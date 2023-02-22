@@ -346,14 +346,10 @@ public class NativeMethods
 
         foreach (var screen in screens)
         {
-            if (screen.DeviceName == laptopScreenName)
-            {
-                laptopScreen = screen;
-            }
+            if (screen.DeviceName == laptopScreenName) return screen;
         }
 
-        if (laptopScreen is null) return null;
-        else return laptopScreen;
+        return null;
     }
 
     public static int GetRefreshRate()
