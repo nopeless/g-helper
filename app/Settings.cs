@@ -854,11 +854,15 @@ namespace GHelper
         }
 
         /// <summary>
-        /// Brings all visible windows to the top, with settings being the focus
+        /// Attempts to bring all visible windows to the top
+        /// <br/>
+        /// Slightly buggy, best we can do
         /// </summary>
         public void ShowAll()
         {
+            this.TopMost = true;
             this.Activate();
+            this.TopMost = false;
         }
 
         /// <summary>
