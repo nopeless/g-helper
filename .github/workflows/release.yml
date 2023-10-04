@@ -35,5 +35,5 @@ jobs:
       if: github.event_name == 'workflow_dispatch'
       uses: actions/upload-artifact@v3
       with:
-        name: GHelper-release-${{ github.sha:0:7 }}
+        name: GHelper-release-${{ github.sha }}
         path: GHelper-*.zip
